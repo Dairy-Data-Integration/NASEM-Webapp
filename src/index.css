@@ -1,1 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
 @import "tailwindcss";
+
+
+/* 
+  Define custom values for use in Tailwind classes.
+  This is where we extend Tailwind with new theme variables,
+  like a custom font and background color.
+*/
+@theme {
+  --font-dmsans: "DM Sans", sans-serif;
+
+  --color-bg: #f4f2f0;
+}
+
+/* Apply DM Sans to all elements */
+* {
+  @apply font-dmsans;
+}
+
+@layer components {
+  .btn {
+    @apply text-white rounded-lg py-2 px-5 cursor-pointer;
+  }
+}
