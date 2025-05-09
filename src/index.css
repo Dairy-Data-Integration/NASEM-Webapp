@@ -9,8 +9,8 @@
 */
 @theme {
   --font-dmsans: "DM Sans", sans-serif;
-
   --color-bg: #f4f2f0;
+  --breakpoint-xs: 500px;
 }
 
 /* Apply DM Sans to all elements */
@@ -20,6 +20,6 @@
 
 @layer components {
   .btn {
-    @apply text-white rounded-lg py-2 px-5 cursor-pointer;
+    @apply text-white text-xs xs:text-sm lg:text-base rounded-lg py-1.5 px-3.5 xs:py-2 xs:px-5 cursor-pointer;
   }
 }
