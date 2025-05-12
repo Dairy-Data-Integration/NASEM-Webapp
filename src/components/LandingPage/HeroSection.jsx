@@ -36,7 +36,8 @@ const HeroSection = () => {
             <div className="bg-[#bad2d9] rounded-xl px-5 py-4 sm:px-10 sm:py-8 w-full flex flex-col gap-2 sm:gap-4">
                 <h2 className="font-bold text-lg sm:text-xl lg:text-3xl">Acknowledgements</h2>
                 <p className="text-xs sm:text-sm lg:text-lg">
-                    This Shiny App was written in Python by Dave Innes to interact with a version of the model translated into Python by Braeden Fieguth from the original R code that is included with the book {' '}
+                    This webapp was developed by Bilal Elkhouly and Emma Balint based on an original design by Dave Innes. 
+                    The underlying model was translated into Python by Braeden Fieguth from the original R code included with the book {' '}
                     <a 
                         href="https://nap.nationalacademies.org/resource/25806/Installation_Instructions_NASEM_Dairy8.pdf"
                         className="font-bold underline">
@@ -46,16 +47,9 @@ const HeroSection = () => {
 
                 {/* Github links and logo container*/}
                 <div className="flex flex-col xs:flex-row items-end xs:items-start justify-between w-full gap-2">
-
-                    <div className="flex flex-col justify-center gap-2 sm:gap-4 text-xs sm:text-sm lg:text-lg">
-                        <p>The source code for the latest Python implementation of the model can be viewed {' '}
-                            <a href="https://github.com/CNM-University-of-Guelph/NASEM-Model-Python" className="font-bold underline">on GitHub.</a>
-                        </p>
-
-                        <p>The source code for this Shiny app (and instructions for running on local computer) can be viewed {' '}
-                             <a href="https://github.com/CNM-University-of-Guelph/NASEM-shiny" className="font-bold underline">on GitHub.</a>
-                        </p>
-                    </div>
+                    <p className="text-xs sm:text-sm lg:text-lg">The source code for the latest Python implementation of the model can be viewed {' '}
+                        <a href="https://github.com/CNM-University-of-Guelph/NASEM-Model-Python" className="font-bold underline">on GitHub.</a>
+                    </p>
 
                     <img src={BioSciLogo} alt="University of Guelph Animal Biosciences Logo" className="w-1/2 xs:w-1/4 max-w-lg"/>
                 </div>
