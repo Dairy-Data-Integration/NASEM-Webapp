@@ -11,6 +11,8 @@
   --font-dmsans: "DM Sans", sans-serif;
   --color-bg: #f4f2f0;
   --breakpoint-xs: 500px;
+  --color-light-blue: #BAD2D9;
+  --color-dark-signup: #1F2B37;
 }
 
 /* Apply DM Sans to all elements */
@@ -21,5 +23,13 @@
 @layer components {
   .btn {
     @apply text-white text-xs xs:text-sm lg:text-base rounded-lg py-1.5 px-3.5 xs:py-2 xs:px-5 cursor-pointer;
+  }
+
+  .input-field {
+    @apply bg-[#F2F2E8] border border-[#2B4131] rounded-full w-full px-5 py-2 shadow-lg font-medium text-[#828282] text-xs sm:text-sm
+  }
+
+  .input-field-label {
+    @apply font-semibold text-dark-signup text-lg sm:text-2xl
   }
 }

@@ -33,7 +33,7 @@ const HeroSection = () => {
             </div>
 
             {/* Acknowledgments Section */}
-            <div className="bg-[#bad2d9] rounded-xl px-5 py-4 sm:px-10 sm:py-8 w-full flex flex-col gap-2 sm:gap-4">
+            <div className="bg-light-blue rounded-xl px-5 py-4 sm:px-10 sm:py-8 w-full flex flex-col gap-2 sm:gap-4">
                 <h2 className="font-bold text-lg sm:text-xl lg:text-3xl">Acknowledgements</h2>
                 <p className="text-xs sm:text-sm lg:text-lg">
                     This webapp was developed by Bilal Elkhouly and Emma Balint based on an original design by Dave Innes. 
