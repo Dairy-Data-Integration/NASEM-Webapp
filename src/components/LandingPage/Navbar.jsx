@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { motion, AnimatePresence } from "framer-motion";
+import { Link } from 'react-router-dom';
 
 // Navbar component for landing page
 // Includes nav links on the left and login/signup buttons on the right
@@ -31,9 +32,13 @@ const Navbar = () => {
       </div>
 
       {/* Right side: Login and Sign-up buttons */}
-      <div className="flex items-center gap-3 ">
-        <button className="btn bg-[#3f554a]">Login</button>
-        <button className="btn bg-[#34565e]">Sign-up</button>
+       <div className="flex items-center gap-3 ">
+        <Link to="/login"> 
+          <button className="btn bg-[#3f554a]">Login</button>
+        </Link>
+        <Link to="/signup"> 
+          <button className="btn bg-[#34565e]">Sign up</button>
+        </Link>
       </div>
 
       {/* Mobile dropdown menu */}
