@@ -49,4 +49,21 @@
   .trigger {
     @apply flex items-center justify-start gap-2 w-full px-4 py-3 cursor-pointer
   }
+
+  .animal-input-label {
+    @apply font-medium
+  }
+
+  .animal-input-box {
+    @apply border-b-2 border-dark-green focus:outline-none
+  }
+
+  .animal-input-sidebar-section {
+    @apply flex flex-col w-full px-4 pt-1.5 pb-5 gap-4 bg-bg text-dark-green
+  }
+
+  .animal-input-group {
+    @apply flex flex-col w-full gap-1 text-sm
+  }
+
 }

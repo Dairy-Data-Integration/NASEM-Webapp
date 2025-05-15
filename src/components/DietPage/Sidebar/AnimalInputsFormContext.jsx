@@ -19,6 +19,10 @@ export const AnimalInputsFormProvider = ({ children }) => {
 		daysPregnant: 46,
 		frameGain: 0,
 		reserveGainLoss: 0,
+		milkYield: 35,
+		milkFat: 3.8,
+		milkProtein: 3.1,
+		milkLactose: 4.85,
 	});
 
 	const onInputChange = (field, value) => {
