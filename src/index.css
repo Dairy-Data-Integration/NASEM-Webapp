@@ -39,6 +39,14 @@
   }
 
   .sidebar-tab {
-    @apply px-10 py-1 rounded-t-[10px] font-medium cursor-pointer 
+    @apply px-10 py-1 rounded-t-[10px] font-medium cursor-pointer
+  }
+
+  .section-style {
+    @apply bg-bg rounded-md text-dark-green overflow-hidden shadow-sm
+  }
+
+  .trigger {
+    @apply flex items-center justify-start gap-2 w-full px-4 py-3 cursor-pointer
   }
 }

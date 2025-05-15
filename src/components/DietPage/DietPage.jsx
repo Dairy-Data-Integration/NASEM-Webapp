@@ -8,7 +8,7 @@ const DietPage = () => {
     const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
     return (
-        <div className="w-full h-screen">
+        <div className="w-full h-full overflow-hidden">
 
             {/* Edit Inputs Buton */}
             <button className="edit-inputs-btn text-dark-green" onClick={() => setIsSidebarOpen(!isSidebarOpen)}>
