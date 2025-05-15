@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { HiOutlinePencilSquare } from "react-icons/hi2";
 import Sidebar from "./Sidebar/Sidebar";
+import { AnimatePresence, motion } from "framer-motion";
 
 
 const DietPage = () => {
@@ -17,10 +18,19 @@ const DietPage = () => {
             </button>
 
             {/* Sidebar */}
-            {isSidebarOpen && (
-                <Sidebar onClose={() => setIsSidebarOpen(!isSidebarOpen)} />
-            )}
-
+            <AnimatePresence>
+                {isSidebarOpen && (
+                        <motion.div
+                            className="h-full"
+                            initial={{ x: "-50%" }}
+                            animate={{ x: 0 }}
+                            exit={{ x: "-100%" }}
+                            transition={{ type: "tween", duration: 0.8 }}
+                        >
+                            <Sidebar onClose={() => setIsSidebarOpen(!isSidebarOpen)} />
+                        </motion.div>
+                    )}
+            </AnimatePresence>
         </div>
     )
 }

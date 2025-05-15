@@ -1,8 +1,9 @@
-import { IoMdArrowDropdown, IoMdArrowDropup } from "react-icons/io";
 import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { IoMdArrowDropdown } from "react-icons/io";
 import AnimalDescription from "./MainInputs/AnimalDescription";
-import MilkProduction from "./MainInputs/MilkProduction";
 import AnimalManagement from "./MainInputs/AnimalManagement";
+import MilkProduction from "./MainInputs/MilkProduction";
 
 const MainSidebar = () => {
 	const [openSection, setOpenSection] = useState("");
@@ -11,6 +12,36 @@ const MainSidebar = () => {
 		setOpenSection((prev) => (prev === section ? null : section));
 	};
 
+	const renderArrow = (section) => (
+		<motion.div
+			animate={{ rotate: openSection === section ? 180 : 0 }}
+			transition={{ duration: 0.25, ease: "easeInOut" }}
+		>
+			<IoMdArrowDropdown size={20} />
+		</motion.div>
+	);
+
+	const renderCollapsible = (section, Component) => (
+		<AnimatePresence initial={false}>
+			{openSection === section && (
+				<motion.div
+					variants={{
+						initial: { height: 0, opacity: 0 },
+						animate: { height: "auto", opacity: 1 },
+						exit: { height: 0, opacity: 0 },
+					}}
+					initial="initial"
+					animate="animate"
+					exit="exit"
+					transition={{ duration: 0.25, ease: "easeInOut" }}
+					className="overflow-hidden"
+				>
+					<Component />
+				</motion.div>
+			)}
+		</AnimatePresence>
+	);
+
 	return (
 		<div className="flex flex-col w-full px-4 py-5 gap-4">
 			<h2 className="font-bold text-lg">Main Options</h2>
@@ -18,28 +49,28 @@ const MainSidebar = () => {
 			{/* Animal Description */}
 			<div className="section-style">
 				<div onClick={() => toggleSection("description")} className="trigger">
-					{openSection === "description" ? <IoMdArrowDropup size={20} /> : <IoMdArrowDropdown size={20} />}
 					<p>Animal Description</p>
+					{renderArrow("description")}
 				</div>
-				{openSection === "description" && (<AnimalDescription />)}
+				{renderCollapsible("description", AnimalDescription)}
 			</div>
 
 			{/* Animal Management */}
 			<div className="section-style">
 				<div onClick={() => toggleSection("management")} className="trigger">
-					{openSection === "management" ? <IoMdArrowDropup size={20} /> : <IoMdArrowDropdown size={20} />}
 					<p>Animal Management</p>
+					{renderArrow("management")}
 				</div>
-				{openSection === "management" && (<AnimalManagement />)}
+				{renderCollapsible("management", AnimalManagement)}
 			</div>
 
 			{/* Milk Production */}
 			<div className="section-style">
 				<div onClick={() => toggleSection("milk")} className="trigger">
-					{openSection === "milk" ? <IoMdArrowDropup size={20} /> : <IoMdArrowDropdown size={20} />}
 					<p>Milk Production</p>
+					{renderArrow("milk")}
 				</div>
-				{openSection === "milk" && (<MilkProduction />)}
+				{renderCollapsible("milk", MilkProduction)}
 			</div>
 		</div>
 	);
