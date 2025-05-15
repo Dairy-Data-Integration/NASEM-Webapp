@@ -5,7 +5,7 @@ import MilkProduction from "./MainInputs/MilkProduction";
 import AnimalManagement from "./MainInputs/AnimalManagement";
 
 const MainSidebar = () => {
-	const [openSection, setOpenSection] = useState("description");
+	const [openSection, setOpenSection] = useState("");
 
 	const toggleSection = (section) => {
 		setOpenSection((prev) => (prev === section ? null : section));

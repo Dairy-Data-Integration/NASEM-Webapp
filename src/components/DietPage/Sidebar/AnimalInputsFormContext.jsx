@@ -14,7 +14,11 @@ export const AnimalInputsFormProvider = ({ children }) => {
 		bodyweight: 700,
 		bodyCondition: 3,
 		age: 54,
-		firstLactationPercent: 33
+		firstLactationPercent: 33,
+		daysInMilk: 100,
+		daysPregnant: 46,
+		frameGain: 0,
+		reserveGainLoss: 0,
 	});
 
 	const onInputChange = (field, value) => {
