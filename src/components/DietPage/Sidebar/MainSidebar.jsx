@@ -4,14 +4,16 @@ import { IoMdArrowDropdown } from "react-icons/io";
 import AnimalDescription from "./MainInputs/AnimalDescription";
 import AnimalManagement from "./MainInputs/AnimalManagement";
 import MilkProduction from "./MainInputs/MilkProduction";
+import { useAnimalInputsForm } from "./AnimalInputsFormContext";
 
 const MainSidebar = () => {
-	const [openSection, setOpenSection] = useState("");
+	const {openSection, setOpenSection} = useAnimalInputsForm();
 
 	const toggleSection = (section) => {
 		setOpenSection((prev) => (prev === section ? null : section));
 	};
 
+	// Function to render the arrow icon with rotation based on the open section
 	const renderArrow = (section) => (
 		<motion.div
 			animate={{ rotate: openSection === section ? 180 : 0 }}
@@ -21,6 +23,7 @@ const MainSidebar = () => {
 		</motion.div>
 	);
 
+	// Function to render the collapsible content and animates its appearance
 	const renderCollapsible = (section, Component) => (
 		<AnimatePresence initial={false}>
 			{openSection === section && (
