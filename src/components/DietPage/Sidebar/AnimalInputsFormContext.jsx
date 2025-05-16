@@ -45,6 +45,10 @@ export const AnimalInputsFormProvider = ({ children }) => {
 		starterFeedStartDay: 14,
 		nonMilkProteinInLiquidFeed: false,
 		rumenDevelopmentDiscount: "none",
+		environmentTemperature: 22,
+		distanceToParlor: 0,
+		dailyParlorTrips: 0,
+		dailyElevationChange: 0,
 	};
 
 	// Initialize formData from localStorage (persistent across browser sessions)
