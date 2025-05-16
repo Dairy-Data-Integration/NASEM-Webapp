@@ -41,6 +41,10 @@ export const AnimalInputsFormProvider = ({ children }) => {
 		milkFat: 3.8,
 		milkProtein: 3.1,
 		milkLactose: 4.85,
+		calfBirthWeight: 44.1,
+		starterFeedStartDay: 14,
+		nonMilkProteinInLiquidFeed: false,
+		rumenDevelopmentDiscount: "none",
 	};
 
 	// Initialize formData from localStorage (persistent across browser sessions)

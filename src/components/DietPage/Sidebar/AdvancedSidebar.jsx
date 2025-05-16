@@ -63,9 +63,9 @@ const AdvancedSidebar = () => {
 			<div className="section-style">
 				<div onClick={() => toggleSection("environmentalGrazing")} className="trigger">
 					<p>Environmental & Grazing</p>
-					{renderArrow("environmentalGrazin")}
+					{renderArrow("environmentalGrazing")}
 				</div>
-				{renderCollapsible("environmentalGrazin", EnvironmentalGrazing)}
+				{renderCollapsible("environmentalGrazing", EnvironmentalGrazing)}
 			</div>
 
 			{/* Equation Selections */}
