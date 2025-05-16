@@ -13,6 +13,7 @@
   --breakpoint-xs: 500px;
   --color-light-blue: #BAD2D9;
   --color-dark-signup: #1F2B37;
+  --color-dark-green: #2D4639;
 }
 
 /* Apply DM Sans to all elements */
@@ -32,4 +33,37 @@
   .input-field-label {
     @apply font-semibold text-dark-signup text-lg sm:text-2xl
   }
+
+  .edit-inputs-btn {
+    @apply absolute bottom-8 right-8 bg-[#DEDEDE] rounded-full flex items-center justify-center gap-1.5 px-3 py-1.5 font-medium shadow-md text-sm border border-dark-green/40 cursor-pointer hover:bg-[#d0d0d0] hover:shadow-lg hover:border-dark-green
+  }
+
+  .sidebar-tab {
+    @apply px-8 xs:px-5 md:px-8 lg:px-10 py-1 rounded-t-[10px] font-medium cursor-pointer
+  }
+
+  .section-style {
+    @apply bg-bg rounded-md text-dark-green overflow-hidden shadow-sm
+  }
+
+  .trigger {
+    @apply flex items-center justify-between w-full px-4 py-3 cursor-pointer
+  }
+
+  .animal-input-label {
+    @apply font-medium
+  }
+
+  .animal-input-box {
+    @apply border-b-2 border-dark-green focus:outline-none
+  }
+
+  .animal-input-sidebar-section {
+    @apply flex flex-col w-full px-4 pt-1.5 pb-5 gap-4 bg-bg text-dark-green
+  }
+
+  .animal-input-group {
+    @apply flex flex-col w-full gap-1 text-sm
+  }
+
 }

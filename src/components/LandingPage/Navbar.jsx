@@ -23,11 +23,10 @@ const Navbar = () => {
 
         {/* Desktop nav links */}
         <ul className="hidden sm:flex gap-6 lg:gap-10 text-sm lg:text-base">
-          <a className="cursor-pointer">Home</a>
-          <a className="cursor-pointer">Inputs</a>
-          <a className="cursor-pointer">Feed Library</a>
-          <a className="cursor-pointer">Diet</a>
-          <a className="cursor-pointer">Outputs</a>
+          <a className="cursor-pointer" href="/">Home</a>
+          <a className="cursor-pointer" href="/library">Feed Library</a>
+          <a className="cursor-pointer" href="/diet">Diet</a>
+          <a className="cursor-pointer" href="/outputs">Outputs</a>
         </ul>
       </div>
 
@@ -52,7 +51,6 @@ const Navbar = () => {
             className="absolute top-full left-0 w-full bg-bg px-6 py-4 flex flex-col gap-4 shadow-md sm:hidden z-50"
           >
             <a className="cursor-pointer">Home</a>
-            <a className="cursor-pointer">Inputs</a>
             <a className="cursor-pointer">Feed Library</a>
             <a className="cursor-pointer">Diet</a>
             <a className="cursor-pointer">Outputs</a>
