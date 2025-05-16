@@ -44,11 +44,17 @@ export const AnimalInputsFormProvider = ({ children }) => {
 		calfBirthWeight: 44.1,
 		starterFeedStartDay: 14,
 		nonMilkProteinInLiquidFeed: false,
-		rumenDevelopmentDiscount: "none",
+		rumenDevelopmentDiscount: "none",		// options: "none", "10pctDiscount"
 		environmentTemperature: 22,
 		distanceToParlor: 0,
 		dailyParlorTrips: 0,
 		dailyElevationChange: 0,
+		equationMilkProduction: "component",     // options: "trg", "component", "ne", "mp", "min"
+		equationMilkProtein: "nrc",              // options: "target", "nrc", "vt1", "vt2"
+		equationMilkFat: "predicted",            // options: "trg", "predicted"
+		equationMicrobialN: "nrc",               // options: "nrc", "hanigan", "white"
+		equationDNDF_IV: "lg",                   // options: "lg", "forage", "all"
+		useMonensin: false,                      // boolean
 	};
 
 	// Initialize formData from localStorage (persistent across browser sessions)
