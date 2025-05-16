@@ -39,7 +39,7 @@
   }
 
   .sidebar-tab {
-    @apply px-10 py-1 rounded-t-[10px] font-medium cursor-pointer
+    @apply px-8 xs:px-5 md:px-8 lg:px-10 py-1 rounded-t-[10px] font-medium cursor-pointer
   }
 
   .section-style {

@@ -7,7 +7,7 @@ const Sidebar = ({ onClose }) => {
     const [activeTab, setActiveTab] = useState('main');
 
     return (
-        <div className="w-1/4 h-full flex flex-col text-white z-50 shadow-lg">
+        <div className="w-4/5 xs:w-3/5 sm:w-5/12 xl:w-1/4 h-full flex flex-col text-white z-50 shadow-2xl">
 
             {/* Top tab controls and close button */}
             <div className="flex w-full items-center justify-between mt-5 pr-2.5">

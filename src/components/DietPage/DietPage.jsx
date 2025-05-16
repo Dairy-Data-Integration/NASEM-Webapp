@@ -12,11 +12,13 @@ const DietPage = () => {
         <div className="w-full h-full overflow-hidden">
 
             {/* Edit Inputs Buton */}
-            <button className="edit-inputs-btn text-dark-green" onClick={() => setIsSidebarOpen(!isSidebarOpen)}>
-                Edit Inputs
-                <HiOutlinePencilSquare size={18}/>
-            </button>
-
+            {!isSidebarOpen && (
+                <button className="edit-inputs-btn text-dark-green" onClick={() => setIsSidebarOpen(!isSidebarOpen)}>
+                    Edit Inputs
+                    <HiOutlinePencilSquare size={18}/>
+                </button>
+            )}
+            
             {/* Sidebar */}
             <AnimatePresence>
                 {isSidebarOpen && (
