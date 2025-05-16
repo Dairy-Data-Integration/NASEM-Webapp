@@ -8,10 +8,11 @@ import OtherSection from "./AdvancedInputs/OtherSection";
 
 
 const AdvancedSidebar = () => {
-    const {openSection, setOpenSection} = useAnimalInputsForm();
+    const { openSections, toggleOpenSection } = useAnimalInputsForm();
+	const openSection = openSections.advanced;
 
 	const toggleSection = (section) => {
-		setOpenSection((prev) => (prev === section ? null : section));
+		toggleOpenSection("advanced", section);
 	};
 
 	// Function to render the arrow icon with rotation based on the open section

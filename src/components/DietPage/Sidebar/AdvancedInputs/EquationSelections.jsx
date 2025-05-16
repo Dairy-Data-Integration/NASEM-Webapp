@@ -8,7 +8,7 @@ const EquationSelections = () => {
 
             {/* Milk production equation */}
             <div className="animal-input-group">
-                <label className="animal-input-label">Milk production equation to use for calc (currently hard-coded to use Trg_MilkProd):</label>
+                <label className="animal-input-label">Milk production equation to use for calcs (currently hard-coded to use Trg_MilkProd):</label>
                 {[
                     { label: "Trg_MilkProd", value: "trg" },
                     { label: "component based predicted", value: "component" },
@@ -31,7 +31,7 @@ const EquationSelections = () => {
 
             {/* Milk Protein equations and AA coefficients */}
             <div className="animal-input-group">
-                <label className="animal-input-label">Milk Protein equations and AA coefficients to use.Target TP will use target TP for protein equations and NRC coefficients in AA equations.Predict TP with NRC equations and coefficients (NRC 2021)VT1 coefficients from Dec. 20, 2020 - Virginia Tech (no Phe, Thr, Trp, or Val)VT2 coefficients from April, 2022 solutions after further data cleaning - Virginia Tech (no Arg, Phe, Trp, or Val)</label>
+                <label className="animal-input-label">Milk Protein equations and AA coefficients to use. Target TP will use target TP for protein equations and NRC coefficients in AA equations. Predict TP with NRC equations and coefficients (NRC 2021)VT1 coefficients from Dec. 20, 2020 - Virginia Tech (no Phe, Thr, Trp, or Val)VT2 coefficients from April, 2022 solutions after further data cleaning - Virginia Tech (no Arg, Phe, Trp, or Val)</label>
                 {[
                     { label: "Target TP", value: "target" },
                     { label: "Predicted: NRC", value: "nrc" },

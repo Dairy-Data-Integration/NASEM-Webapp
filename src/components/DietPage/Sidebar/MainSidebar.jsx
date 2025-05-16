@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { IoMdArrowDropdown } from "react-icons/io";
 import AnimalDescription from "./MainInputs/AnimalDescription";
@@ -7,10 +6,11 @@ import MilkProduction from "./MainInputs/MilkProduction";
 import { useAnimalInputsForm } from "./AnimalInputsFormContext";
 
 const MainSidebar = () => {
-	const {openSection, setOpenSection} = useAnimalInputsForm();
+	const { openSections, toggleOpenSection } = useAnimalInputsForm();
+	const openSection = openSections.main;
 
 	const toggleSection = (section) => {
-		setOpenSection((prev) => (prev === section ? null : section));
+		toggleOpenSection("main", section);
 	};
 
 	// Function to render the arrow icon with rotation based on the open section
